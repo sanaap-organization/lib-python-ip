@@ -14,5 +14,5 @@ class IPMiddleware:
         if forwarded:
             ip = forwarded.split(",")[0]
 
-        request.check = detector.check(ip)
+        request.is_allowed_ip = detector.is_allowed_ip(ip)
         return self.get_response(request)

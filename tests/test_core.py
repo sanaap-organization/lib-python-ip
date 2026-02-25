@@ -12,17 +12,17 @@ def detector():
 
 
 def test_ip_inside_range(detector):
-    assert detector.check("5.52.10.20") is True
+    assert detector.is_allowed_ip("5.52.10.20") is True
 
 
 def test_ip_outside_range(detector):
-    assert detector.check("8.8.8.8") is False
+    assert detector.is_allowed_ip("8.8.8.8") is False
 
 
 def test_exact_boundary_ip(detector):
-    assert detector.check("5.52.0.0") is True
+    assert detector.is_allowed_ip("5.52.0.0") is True
 
 
 def test_invalid_ip_format(detector):
     with pytest.raises(ValueError):
-        detector.check("not-an-ip")
+        detector.is_allowed_ip("not-an-ip")

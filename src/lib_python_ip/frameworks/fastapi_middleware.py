@@ -11,7 +11,7 @@ async def ip_middleware(request: Request, call_next):
     if forwarded:
         ip = forwarded.split(",")[0].strip()
 
-    request.state.check = detector.check(ip)
+    request.state.is_allowed_ip = detector.is_allowed_ip(ip)
 
     response = await call_next(request)
     return response
