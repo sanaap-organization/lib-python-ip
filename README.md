@@ -17,6 +17,13 @@ Works seamlessly with FastAPI, Django, or any Python web framework.
 
 ✅ Framework Agnostic: Works with any Python HTTP framework with minimal integration.
 
+# Installation
+### with pip
+pip install git+https://github.com/sanaap-organization/lib-python-ip.git
+
+### with uv
+uv add git+https://github.com/sanaap-organization/lib-python-ip.git
+
 # Usage
 
 ## FastAPI
