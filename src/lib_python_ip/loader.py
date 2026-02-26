@@ -1,6 +1,6 @@
 import json
 import ipaddress
-from importlib.resources import files
+from importlib_resources import files
 
 
 def load():
