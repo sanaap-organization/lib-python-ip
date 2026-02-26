@@ -29,7 +29,7 @@ uv add git+https://github.com/sanaap-organization/lib-python-ip.git
 ## FastAPI
 ### Step 1
 ```
-from ip_detector.frameworks.fastapi import ip_middleware
+from lib_python_ip.frameworks.fastapi import ip_middleware
 
 app.middleware("http")(ip_middleware)
 ```
@@ -47,7 +47,7 @@ async def sample_view(request: Request):
 ```
 MIDDLEWARE = [
     ...
-    "ip_detector.frameworks.django.IPMiddleware",
+    "lib_python_ip.frameworks.django.IPMiddleware",
 ]
 ```
 ### Step 2
